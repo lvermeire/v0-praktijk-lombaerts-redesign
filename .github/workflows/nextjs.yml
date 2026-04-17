@@ -23,22 +23,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20" # You can change this to match your local Node version
-          
+          cache: "pnpm"
+
       - uses: pnpm/action-setup@v6
         with:
           version: 10
 
       - name: Install dependencies
-        run: pnpm install # Use 'yarn install' or 'npm install' if you don't use pnpm
-        
+        run: pnpm install --frozen-lockfile # Use 'yarn install' or 'npm install' if you don't use pnpm
+
       - name: Build with Next.js
+        env:
+          NEXT_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: pnpm build
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

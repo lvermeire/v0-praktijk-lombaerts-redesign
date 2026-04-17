@@ -5,7 +5,7 @@ export function Hero() {
     <section className="relative h-screen w-full">
       {/* Full-bleed background image */}
       <Image
-        src="/images/hero-hands.jpg"
+        src="images/hero-hands.jpg"
         alt="Therapeutische handen tijdens behandeling"
         fill
         className="object-cover"

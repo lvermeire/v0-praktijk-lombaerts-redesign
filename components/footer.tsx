@@ -40,6 +40,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-primary-foreground/50">
             <p>© {new Date().getFullYear()} Praktijk Lombaerts. Alle rechten voorbehouden.</p>
             <div className="flex gap-6">
+              {/* TODO: link to real privacy/cookie policy pages */}
               <Link href="#" className="hover:text-primary-foreground transition-colors">
                 Privacybeleid
               </Link>

@@ -32,6 +32,7 @@ export function Contact() {
                 <Phone className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-primary">Telefoon</p>
+                  {/* TODO: replace with real phone numbers */}
                   <p className="text-muted-foreground">
                     <Link href="tel:+3234800000" className="hover:text-accent transition-colors">
                       +32 3 480 00 00
@@ -70,7 +71,8 @@ export function Contact() {
               </p>
               
               <div className="space-y-4">
-                <Link 
+                {/* TODO: replace with real phone numbers */}
+                <Link
                   href="tel:+3234800000"
                   className="flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground py-4 text-center hover:bg-accent/90 transition-colors"
                 >

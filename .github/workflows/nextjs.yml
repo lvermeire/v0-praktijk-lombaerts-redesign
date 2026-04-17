@@ -37,7 +37,7 @@ jobs:
         run: pnpm install # Use 'yarn install' or 'npm install' if you don't use pnpm
         
       - name: Build with Next.js
-        run: npx next build
+        run: pnpm build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
